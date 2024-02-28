@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar/Navbar.jsx'
+import Section3 from './components/Section3.jsx'
 import TextSection1 from './components/TextSection1.jsx'
 function App() {
 
@@ -10,8 +11,11 @@ function App() {
      <Navbar/>
      <TextSection1/>
      </div>
+     <div>
+      <Section3/>
+     </div>
  
-  
+
      
       
     </>
