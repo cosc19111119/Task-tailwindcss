@@ -2,7 +2,7 @@ import React from 'react'
 
 function TextSection1() {
   return (
-    <div className='pl-12'>
+    <div className='pl-12 grid '>
     <div className="text-block text-7xl font-bold pt-24">
   <span className="text-black">Unveiling the Finest <br/> </span> 
   <span className="text-green-500">Restaurants</span> 
