@@ -24,7 +24,7 @@ function App() {
 
       </div>
 
-      <div className='bg-white'>
+      <div className=' bg-white'>
         <Section4 />
 
      
