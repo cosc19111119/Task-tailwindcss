@@ -4,24 +4,24 @@ function Seller() {
 
     const card = [
         {
-            id:1,
+            id: 1,
             image: "public/assets/frame1.png",
             title: "Live Healthy Organics",
             rating: "(9676 Reviews)",
             reviews: "sdfsdf"
         },
         {
-            id:2,
+            id: 2,
             image: "public/assets/frame1.png",
             title: "Live Healthy Organics",
             rating: "(9676 Reviews)",
             reviews: "sdfsdf"
         },
         {
-            id:3,
+            id: 3,
             image: "public/assets/frame1.png",
             title: "Live Healthy Organics",
-            rating: "(9676 Reviews)",
+            rating: " (9676 Reviews)",
             reviews: "sdfsdf"
         }
 
@@ -38,9 +38,13 @@ function Seller() {
                         card.map(item => {
                             return <div key={item.id}>
                                 <div class=" dark:bg-black dark:text-white  bgg rounded-xl">
-                                    <img src={item.image} alt="" />
-                                    <div class="font-bold text-2xl  px-4  py-3">{item.title}</div>
-                                    <p class=" text-base px-4  pt-3 pb-8 ">{item.rating}</p>
+                                    <img className='mb-3' src={item.image} alt="" />
+                                    <span className='px-3 mt-3 rounded-full text-gray-900 bg-green-500 py-1'>11: 30 Am- 12:30 Pm</span>
+                                    <div class="font-bold text-2xl   py-3">{item.title}</div>
+                                    <div className='flex '>
+                                        <img src="public/assets/rating.png" alt="" />
+                                        <span class=" text-base flex items-center ">     {   item.rating}</span>
+                                        </div>
                                 </div>
 
 
