@@ -1,14 +1,17 @@
 import React from 'react';
+import { useState } from 'react';
 import { CiSearch } from "react-icons/ci";
+import { IoSearch } from "react-icons/io5";
 
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
 
 
 
-        <nav className=" pl-12 ">
-            <div className=" flex flex-wrap items-center justify-between mx-auto pt-5">
+        <nav className=" ">
+            <div className=" flex flex-wrap items-center justify-between mx-auto pt-5 pl-12 ">
                 <a href="#" className=" ">
                     <div className='flex justify-center'>
                         <img
@@ -24,6 +27,7 @@ const Navbar = () => {
                     </div>
                 </a>
                 <button
+                    onClick={() => setIsOpen(!isOpen)}
                     data-collapse-toggle="navbar-multi-level"
                     type="button"
                     className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -48,32 +52,58 @@ const Navbar = () => {
                     </svg>
                 </button>
                 <div className="hidden bg-[#8BC63E] md:block " id="navbar-multi-level ">
-                    <ul className="flex items-center justify-between gap-4 py-4 pl-2 pr-20"> 
+                    <ul className="flex items-center justify-between gap-4 py-4 pl-2 pr-20">
                         <li>
-                            <a href="#" className=" text-center font-bold text-[20]" aria-current="page"> 
+                            <a href="#" className=" text-center font-bold text-[20]" aria-current="page">
                                 HOME
                             </a>
                         </li>
                         <li>
-                            <a href="#" className=" text-center  font-bold text-[20]" aria-current="page"> 
+                            <a href="#" className=" text-center  font-bold text-[20]" aria-current="page">
                             </a>
                         </li>
                         <li>
-                            <a href="#" className=" text-center font-bold text-[20]" aria-current="page"> 
+                            <a href="#" className=" text-center font-bold text-[20]" aria-current="page">
                                 FAQs
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="  text-center font-bold text-[20]" aria-current="page"> 
+                            <a href="#" className="  text-center font-bold text-[20]" aria-current="page">
                                 CONTACT US
                             </a>
                         </li>
-                        <li className="text-center "> 
-                            <span className="text-center flex"><img className='h-7 text-center' src="public/assets/searchicon.png" alt="" /></span> 
+                        <li className="text-center ">
+                            <span className="text-center flex"><img className='h-7 text-center' src="public/assets/searchicon.png" alt="" /></span>
                         </li>
                     </ul>
                 </div>
 
+            </div>
+            <div className={`${isOpen ? '' : 'hidden'} lg:hidden`}>
+                <ul className=" py-4 bg-[#8BC63E] px-12 ">
+                    <li>
+                        <a href="#" className="  font-bold text-[20]" aria-current="page">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className=" font-bold text-[20]" aria-current="page">
+                        </a>
+                    </li>
+                    <li className='my-3'>
+                        <a href="#" className="  font-bold text-[20]" aria-current="page">
+                            FAQs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" className="  font-bold text-[20]" aria-current="page">
+                            CONTACT US
+                        </a>
+                    </li>
+                    <li className="mt-5">
+                        <IoSearch />
+                    </li>
+                </ul>
             </div>
         </nav>
 

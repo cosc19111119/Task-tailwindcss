@@ -3,8 +3,8 @@ import Card from './Card';
 
 function Section3() {
     return (
-      <div className="grid grid-cols-4">
-        <div className="relative row-span-2">
+      <div className="grid grid-cols-2 md:grid-cols-4 ">
+        <div className="relative hidden md:block row-span-2">
           <div className="absolute inset-0 bg-[url('public/assets/bgImage.png')] bg-cover z-0 overflow-hidden"></div>
           <div className="absolute inset-0 flex items-center justify-center flex-col z-10">
             <p class="text-white text-2xl font-bold">Vegetables</p>
